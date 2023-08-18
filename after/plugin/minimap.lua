@@ -15,9 +15,9 @@ require("mini.map").setup({
 		side = "right",
 		show_integration_count = false,
 		width = 25,
-		winblend = 25,
+		winblend = 0,
 	}
 })
 
 MiniMap.open()
-MiniMap.refresh()
+-- MiniMap.refresh()
