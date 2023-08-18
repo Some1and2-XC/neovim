@@ -7,6 +7,8 @@ lsp.ensure_installed({
 	"eslint",
 	"pylsp",
 	"rust_analyzer",
+	"html",
+	"eslint",
 	"lua_ls",
 })
 

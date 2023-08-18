@@ -24,4 +24,4 @@ function colorify(color)
 end
 
 
--- colorify()
+colorify()
