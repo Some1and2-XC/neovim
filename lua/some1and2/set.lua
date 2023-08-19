@@ -6,9 +6,10 @@ vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 
+vim.cmd(":set noexpandtab")
+
 vim.opt.smartindent = true
 
-vim.opt.expandtab = false
 vim.opt.listchars = { tab = "───" }
 
 -- Configures SWAP & UNDO dirs

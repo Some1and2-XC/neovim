@@ -7,8 +7,8 @@ require("mini.map").setup({
 		-- encode = MiniMap.gen_encode_symbols.block("2x1"),
 		encode = MiniMap.gen_encode_symbols.dot("4x2"),
 		scroll_line = '█',
-		-- scroll_view = '┃',
-		scroll_view = ' ',
+		scroll_view = '┃',
+		-- scroll_view = ' ',
 	},
 	window = {
 		focusable = false,
@@ -19,5 +19,7 @@ require("mini.map").setup({
 	}
 })
 
-MiniMap.open()
+vim.keymap.set("n", "<leader>mt", MiniMap.toggle)
+
+-- MiniMap.open()
 -- MiniMap.refresh()

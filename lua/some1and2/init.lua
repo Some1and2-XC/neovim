@@ -16,4 +16,3 @@ vim.cmd [[colorscheme kanagawa]]
 
 -- Defaults to D Drive (If it exists)
 vim.cmd("e D:/")
-
