@@ -9,9 +9,9 @@ return require("packer").startup(function(use)
 	}
 
 	-- Styles
-	use("itchyny/lightline.vim") -- Sets the status line
-	use("rebelot/kanagawa.nvim") -- Sets the colorscheme
-	use("echasnovski/mini.map")
+	use{"itchyny/lightline.vim", commit = "b1e91b4"} -- Sets the status line
+	use{"rebelot/kanagawa.nvim", commit = "1749cea"} -- Sets the colorscheme
+	use{"echasnovski/mini.map", commit = "2f35a59"}
 
 	use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'} )
 	use("nvim-treesitter/playground")
