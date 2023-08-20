@@ -9,6 +9,7 @@ lsp.ensure_installed({
 	"rust_analyzer",
 	"html",
 	"eslint",
+	"cssls",
 	"lua_ls",
 })
 
