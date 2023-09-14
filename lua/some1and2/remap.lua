@@ -4,8 +4,9 @@ vim.cmd("command! Vb normal! <C-v>")
 
 
 vim.keymap.set("n", "<leader>tu", ":set noexpandtab<CR>")  -- Tab use
-vim.keymap.set("n", "<leader>tU", ":set expandtab<CR>")  -- Tab Unuse
-vim.keymap.set("n", "<leader>tt", ":set invlist<CR>")  -- Tab toggle
+vim.keymap.set("n", "<leader>tU", ":set expandtab<CR>")    -- Tab Unuse
+vim.keymap.set("n", "<leader>tt", ":set invlist<CR>")      -- Tab toggle
+vim.keymap.set("n", "<leader>trm", ":%s/\t/    <CR>")      -- Tab Remove
 
 vim.keymap.set("n", "<leader>pv", vim.cmd.E)
 vim.keymap.set("n", "<leader>pt", vim.cmd.Tex)

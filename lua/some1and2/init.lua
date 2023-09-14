@@ -15,4 +15,4 @@ vim.cmd [[colorscheme kanagawa]]
 -- vim.g.lightline = { colorscheme = "tender"}
 
 -- Defaults to D Drive (If it exists)
-vim.cmd("e D:/")
+-- vim.cmd("e D:/")
