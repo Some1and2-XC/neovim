@@ -13,12 +13,8 @@ vim.cmd [[
 --vim.cmd [[colorscheme rose-pine-moon]]
 vim.cmd [[colorscheme kanagawa]]
 -- vim.g.lightline = { colorscheme = "tender"}
+vim.cmd [[let g:airline_theme="term"]]
 
 -- Defaults to D Drive (If it exists)
 -- vim.cmd("e D:/")
 vim.cmd("e E:/")
-
-
-vim.cmd [[
-    let g:airline_theme="term"
-]]
