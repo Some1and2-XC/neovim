@@ -45,13 +45,6 @@ function UnColorify(color)
 
     color = color or "default"
 
-    vim.cmd [[
-        let g:airline_theme="dark"
-
-        let g:airline_left_sep = "|"
-        let g:airline_right_sep = "|"
-    ]]
-
     vim.cmd.colorscheme(color)
 
     vim.api.nvim_set_hl(0, "Normal", { bg = "black" })
@@ -59,6 +52,10 @@ function UnColorify(color)
     vim.api.nvim_set_hl(0, "FloatBorder", { bg = "black" })
     vim.api.nvim_set_hl(0, "FloatTitle", { bg = "black" })
     vim.api.nvim_set_hl(0, "TelescopeBorder", { bg = "black" })
+
+    vim.cmd [[
+        set statusline=
+    ]]
 end
 
 
@@ -67,4 +64,3 @@ if true then
 else
     UnColorify()
 end
-
