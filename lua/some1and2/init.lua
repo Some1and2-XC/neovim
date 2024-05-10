@@ -17,3 +17,8 @@ vim.cmd [[colorscheme kanagawa]]
 -- Defaults to D Drive (If it exists)
 -- vim.cmd("e D:/")
 vim.cmd("e E:/")
+
+
+vim.cmd [[
+    let g:airline_theme="term"
+]]

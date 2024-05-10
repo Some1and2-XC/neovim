@@ -23,7 +23,6 @@ function Colorify(color)
         hi clear CursorLine
 
         let g:airline#extensions#fugitiveline#enabled = 1
-        let g:airline_theme="term"
 
         let g:airline_left_sep = "\ue0bc"
         let g:airline_right_sep = "\ue0b6"
