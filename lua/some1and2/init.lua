@@ -5,8 +5,8 @@ require("some1and2.commands")
 
 -- Sets Line Numbers
 vim.cmd [[
-	let g:netrw_bufsettings = 'noma nomod nu rnu nobl nowrap ro'
-	set nu rnu
+    let g:netrw_bufsettings = 'noma nomod nu rnu nobl nowrap ro'
+    set nu rnu
 ]]
 
 -- vim.cmd [[colorscheme desert]]

@@ -2,10 +2,33 @@ vim.lsp.set_log_level("debug")
 
 local lsp = require("lsp-zero").preset({})
 
+local eslint = require("eslint")
+local null_ls = require("null-ls")
+null_ls.setup()
+eslint.setup({
+	bin = "eslint",
+	code_actions = {
+		enable = true,
+		apply_on_save = {
+			enable = true,
+			types = { "directive", "problem", "suggestion", "layout" },
+		},
+		disable_comment_rule = {
+			enable = true,
+			location = "separate_line",
+		},
+	},
+	diagnostics = {
+		enable = true,
+		report_unused_disable_directives = false,
+		run_on = "type",
+	},
+
+})
+
 
 lsp.ensure_installed({
 	"eslint",
-	"null-ls",
 	"pylsp",
 	"rust_analyzer",
 	"html",
@@ -23,6 +46,7 @@ require'lspconfig'.lua_ls.setup {
 		},
 	},
 }
+
 
 
 

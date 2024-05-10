@@ -2,12 +2,13 @@
 -- Enters visual block with :Vb
 vim.cmd("command! Vb normal! <C-v>")
 
+vim.keymap.set("n", "<leader>trm", ":%s/\t/    <CR>")      -- Tab remove
 
 vim.keymap.set("n", "<leader>tu", ":set noexpandtab<CR>")  -- Tab use
-vim.keymap.set("n", "<leader>tU", ":set expandtab<CR>")  -- Tab Unuse
-vim.keymap.set("n", "<leader>tt", ":set invlist<CR>")  -- Tab toggle
+vim.keymap.set("n", "<leader>tU", ":set expandtab<CR>")    -- Tab Unuse
+vim.keymap.set("n", "<leader>tt", ":set invlist<CR>")      -- Tab toggle
 
-vim.keymap.set("n", "<leader>pv", vim.cmd.E)
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("n", "<leader>pt", vim.cmd.Tex)
 
 -- ALlows for i + o to switch tabs

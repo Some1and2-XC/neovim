@@ -84,15 +84,15 @@ _G.packer_plugins = {
     path = "C:\\Users\\mkpt0\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["eslint.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\mkpt0\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\eslint.nvim",
+    url = "https://github.com/MunifTanjim/eslint.nvim"
+  },
   ["kanagawa.nvim"] = {
     loaded = true,
     path = "C:\\Users\\mkpt0\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\kanagawa.nvim",
     url = "https://github.com/rebelot/kanagawa.nvim"
-  },
-  ["lightline.vim"] = {
-    loaded = true,
-    path = "C:\\Users\\mkpt0\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lightline.vim",
-    url = "https://github.com/itchyny/lightline.vim"
   },
   ["lsp-zero.nvim"] = {
     loaded = true,
@@ -114,6 +114,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\mkpt0\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\mini.map",
     url = "https://github.com/echasnovski/mini.map"
   },
+  ["null-ls.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\mkpt0\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\null-ls.nvim",
+    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "C:\\Users\\mkpt0\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-cmp",
@@ -128,6 +133,13 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\mkpt0\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
+  ["nvim-treesitter-textobjects"] = {
+    load_after = {},
+    loaded = true,
+    needs_bufread = false,
+    path = "C:\\Users\\mkpt0\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\nvim-treesitter-textobjects",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter-textobjects"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -144,6 +156,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\mkpt0\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["promptline.vim"] = {
+    loaded = true,
+    path = "C:\\Users\\mkpt0\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\promptline.vim",
+    url = "https://github.com/edkolev/promptline.vim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "C:\\Users\\mkpt0\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope.nvim",
@@ -154,6 +171,21 @@ _G.packer_plugins = {
     path = "C:\\Users\\mkpt0\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\undotree",
     url = "https://github.com/mbbill/undotree"
   },
+  ["vim-airline"] = {
+    loaded = true,
+    path = "C:\\Users\\mkpt0\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-airline",
+    url = "https://github.com/vim-airline/vim-airline"
+  },
+  ["vim-airline-themes"] = {
+    loaded = true,
+    path = "C:\\Users\\mkpt0\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-airline-themes",
+    url = "https://github.com/vim-airline/vim-airline-themes"
+  },
+  ["vim-devicons"] = {
+    loaded = true,
+    path = "C:\\Users\\mkpt0\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-devicons",
+    url = "https://github.com/ryanoasis/vim-devicons"
+  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "C:\\Users\\mkpt0\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-fugitive",
@@ -162,6 +194,11 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Load plugins in order defined by `after`
+time([[Sequenced loading]], true)
+vim.cmd [[ packadd nvim-treesitter ]]
+vim.cmd [[ packadd nvim-treesitter-textobjects ]]
+time([[Sequenced loading]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
