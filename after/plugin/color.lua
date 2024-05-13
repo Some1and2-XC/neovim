@@ -39,6 +39,8 @@ function WithBackground(color)
 
     vim.cmd.colorscheme(color)
 
+    vim.cmd[[ set nu rnu]]
+
 end
 
 function UnColorify(color)
@@ -55,6 +57,7 @@ function UnColorify(color)
 
     vim.cmd [[
         set statusline=
+        set nonu nornu
     ]]
 end
 

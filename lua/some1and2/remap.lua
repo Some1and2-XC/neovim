@@ -11,6 +11,11 @@ vim.keymap.set("n", "<leader>tt", ":set invlist<CR>")      -- Tab toggle
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("n", "<leader>pt", vim.cmd.Tex)
 
+-- Color Shennanigans
+vim.keymap.set("n", "<leader>cb", function() WithBackground() end, {noremap=true})
+vim.keymap.set("n", "<leader>cs", function() Colorify() end, {noremap=true})
+vim.keymap.set("n", "<leader>crm", function() UnColorify() end, {noremap=true})
+
 -- ALlows for i + o to switch tabs
 vim.keymap.set("n", "<C-i>", vim.cmd.tabp)
 vim.keymap.set("n", "<C-o>", vim.cmd.tabn)

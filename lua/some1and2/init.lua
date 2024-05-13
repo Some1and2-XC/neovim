@@ -7,6 +7,7 @@ require("some1and2.commands")
 vim.cmd [[
     let g:netrw_bufsettings = 'noma nomod nu rnu nobl nowrap ro'
     set nu rnu
+    set ff=unix
 ]]
 
 -- vim.cmd [[colorscheme desert]]
