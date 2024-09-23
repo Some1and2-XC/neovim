@@ -1,6 +1,6 @@
 # Neovim Configuration for @some1and2
 
-Install steps:
+## Install steps:
 1. Install neovim
 2. Run `:h xdg` and find the config directory applicable for the version of NVIM you're running.
 2. Use the config directory found (example: `~/AppData/Local/nvim`) and clone this repo into that folder.
@@ -21,3 +21,10 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvi
     - Run `:so` in this file.
     - Run `:PackerSync` to actually install all the packages.
     - Run `:q` and go outside (or restart vim and see if things work).
+
+## Optional Checks:
+To make sure that undo is working correctly, on gnu making sure a directory called `/srv/undodir` should be created that is owned by the user.
+```bash
+sudo mkdir /srv/undodir
+sudo chown some1and2 /srv/undodir
+```

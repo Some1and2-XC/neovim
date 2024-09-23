@@ -45,7 +45,6 @@ vim.opt.scrolloff = 8
 
 vim.opt.signcolumn = "yes"
 
-
 -- vim.opt.termguicolors = true
 vim.g.netrw_keepdir = false
 
