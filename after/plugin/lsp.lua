@@ -33,6 +33,7 @@ lsp.ensure_installed({
     "html",
     "cssls",
     "lua_ls",
+    "jdtls",
 })
 
 require'lspconfig'.lua_ls.setup {
@@ -45,6 +46,49 @@ require'lspconfig'.lua_ls.setup {
         },
     },
 }
+
+-- local jdtls_config = require("jdtls").start_or_attach({
+--     cmd = {
+--         --
+--         "java",
+--         "-Declipse.application=org.eclipse.jdt.ls.core.id1",
+--         "-Dosgi.bundles.defaultStartLevel=4",
+--         "-Declipse.product=org.eclipse.jdt.ls.core.product",
+--         "-Dlog.protocol=true",
+--         "-Dlog.level=ALL",
+--         "-Xms1g",
+--         "--add-modules=ALL-SYSTEM",
+--         "--add-opens",
+--         "java.base/java.util=ALL-UNNAMED",
+--         "--add-opens",
+--         "java.base/java.lang=ALL-UNNAMED",
+--         "-jar",
+--         -- this may need to be changed depending on the platform
+--         "~/.local/share/nvim/mason/packages/jdtls/plugins/org.eclipse.equinox.launcher.gtk.linux.x86_64_1.2.1100.v20240722-2106.jar",
+--         "-configuration", "~/.local/share/nvim/mason/packages/jdtls/config_linux",
+--         "-data", "~/.local/share/nvim/java"
+--     },
+--     settings = {
+--         java = {
+--             signatureHelp = {enabled = true},
+--             import = {enabled = true},
+--             rename = {enabled = true}
+--         }
+--     },
+--     init_options = {
+--         bundles = {}
+--     }
+-- })
+--
+-- local pkg_status, jdtls = pcall(require, "jdtls")
+--
+-- if not pkg_status then
+--     vim.notify("unable to load nvim-jdtls", "error")
+--     return
+-- end
+--
+-- jdtls.start_or_attach(jdtls_config)
+
 
 lsp.on_attach(function(client, bufnr)
     -- see :help lsp-zero-keybindings
