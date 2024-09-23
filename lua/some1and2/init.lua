@@ -1,7 +1,7 @@
+require("some1and2.packer")
 require("some1and2.set")
 require("some1and2.remap")
 require("some1and2.commands")
-
 
 -- Sets Line Numbers
 vim.cmd [[
@@ -17,5 +17,4 @@ vim.cmd [[colorscheme kanagawa]]
 vim.cmd [[let g:airline_theme="term"]]
 
 -- Defaults to D Drive (If it exists)
--- vim.cmd("e D:/")
-vim.cmd("e E:/")
+-- vim.cmd("/media/some1and2/")

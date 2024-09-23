@@ -1,7 +1,10 @@
+-- Goes to projects directory
+vim.keymap.set("n", "<leader>projects", ":Ex /media/some1and2/T7<CR>")
 
 -- Enters visual block with :Vb
 vim.cmd("command! Vb normal! <C-v>")
 
+-- Tab remove
 vim.keymap.set("n", "<leader>trm", ":%s/\t/    <CR>")      -- Tab remove
 
 vim.keymap.set("n", "<leader>tu", ":set noexpandtab<CR>")  -- Tab use

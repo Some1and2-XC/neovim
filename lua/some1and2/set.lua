@@ -1,3 +1,17 @@
+-- Fixes copy+paste stuff
+vim.g.clipboard = {
+  name = 'OSC 52',
+  copy = {
+    ['+'] = require('vim.ui.clipboard.osc52').copy('+'),
+    ['*'] = require('vim.ui.clipboard.osc52').copy('*'),
+  },
+  paste = {
+    ['+'] = require('vim.ui.clipboard.osc52').paste('+'),
+    ['*'] = require('vim.ui.clipboard.osc52').paste('*'),
+  },
+}
+
+
 -- Status Line
 vim.opt.showmode = false
 
@@ -16,7 +30,9 @@ vim.opt.listchars = { tab = "───" }
 vim.opt.swapfile = false
 vim.opt.backup = false
 
-vim.opt.undodir = os.getenv("APPDATA") .. "/.vim/undodir"
+-- os.getenv("APPDATA") .. "/.vim/undodir"
+vim.opt.undodir = "~/.config/nvim/undodir"
+vim.opt.undodir = "/srv/undodir"
 vim.opt.undofile = true
 
 -- removes selection after used
