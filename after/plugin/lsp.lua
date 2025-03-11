@@ -115,3 +115,5 @@ cmp.setup({
         ['<C-b>'] = cmp_action.luasnip_jump_backward(),
     }
 })
+
+require('lspkind').init()

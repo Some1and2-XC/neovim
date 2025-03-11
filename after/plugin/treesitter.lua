@@ -1,8 +1,38 @@
 -- require 'nvim-treesitter.install'.compilers = { 'clang' }
 
+local on_attach = function(client)
+    require'completion'.on_attach(client)
+end
+
 require 'nvim-treesitter.configs'.setup {
     -- A list of parser names, or "all" (the five listed parsers should always be installed)
     ensure_installed = { "rust", "lua", "vim", },
+
+    handlers = {
+        rust_analyzer = function()
+            require("lspconfig").rust.setup({
+                on_attach = on_attach,
+                settings = {
+                    ["rust-analyzer"] = {
+                        imports = {
+                            granularity = {
+                                group = "module",
+                            },
+                            prefix = "self",
+                        },
+                        cargo = {
+                            buildScripts = {
+                                enable = true,
+                            },
+                        },
+                        procMacro = {
+                            enable = true,
+                        },
+                    },
+                },
+            })
+        end
+    },
 
     -- Install parsers synchronously (only applied to `ensure_installed`)
     sync_install = false,
@@ -34,3 +64,5 @@ require 'nvim-treesitter.configs'.setup {
         additional_vim_regex_highlighting = false,
     },
 }
+
+

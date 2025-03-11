@@ -50,4 +50,7 @@ return require("packer").startup(function(use)
         }
     }
 
+    -- Adds pictograms for lsp
+    use{"onsails/lspkind.nvim", commit = "d79a1c3"}
+
 end)
