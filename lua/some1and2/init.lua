@@ -2,6 +2,7 @@ require("some1and2.packer")
 require("some1and2.set")
 require("some1and2.remap")
 require("some1and2.commands")
+require("some1and2.rust")
 
 -- Sets Line Numbers
 vim.cmd [[

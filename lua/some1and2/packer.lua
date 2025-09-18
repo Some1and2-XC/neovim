@@ -21,6 +21,7 @@ return require("packer").startup(function(use)
     use{"rebelot/kanagawa.nvim", commit = "1749cea"} -- Sets the colorscheme
     use{"echasnovski/mini.map", commit = "2f35a59"}
 
+    -- Treesitter
     use{"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
     use{
         "nvim-treesitter/nvim-treesitter-textobjects",
@@ -28,7 +29,6 @@ return require("packer").startup(function(use)
         requires = "nvim-treesitter/nvim-treesitter",
         commit = "73e44f43c70289c70195b5e7bc6a077ceffddda4"
     }
-
     use("nvim-treesitter/playground")
 
     use("mbbill/undotree")
@@ -42,11 +42,13 @@ return require("packer").startup(function(use)
             {'neovim/nvim-lspconfig'},             -- Required
             {'williamboman/mason.nvim'},           -- Optional
             {'williamboman/mason-lspconfig.nvim'}, -- Optional
+            -- {'imrcjkb/rustaceanvim'}, -- rust
 
             -- Autocompletion
             {'hrsh7th/nvim-cmp'},     -- Required
             {'hrsh7th/cmp-nvim-lsp'}, -- Required
             {'L3MON4D3/LuaSnip'},     -- Required
+
         }
     }
 
