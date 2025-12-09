@@ -24,7 +24,6 @@ eslint.setup({
         report_unused_disable_directives = false,
         run_on = "type",
     },
-
 })
 
 lsp.ensure_installed({
@@ -34,10 +33,13 @@ lsp.ensure_installed({
     "html",
     "cssls",
     "lua_ls",
+    "clangd",
     "jdtls",
 })
 
-require'lspconfig'.lua_ls.setup {
+local lspconfig = require("lspconfig")
+
+lspconfig.lua_ls.setup {
     settings = {
         Lua = {
             diagnostics = {
@@ -45,6 +47,13 @@ require'lspconfig'.lua_ls.setup {
                 globals = {'vim'},
             },
         },
+    },
+}
+
+lspconfig.clangd.setup {
+
+    cmd = {
+        "clangd",
     },
 }
 
