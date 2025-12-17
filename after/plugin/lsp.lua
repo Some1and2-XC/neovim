@@ -33,7 +33,7 @@ lsp.ensure_installed({
     "html",
     "cssls",
     "lua_ls",
-    "clangd",
+    -- "clangd",
     "jdtls",
 })
 
