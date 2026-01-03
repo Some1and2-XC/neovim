@@ -17,7 +17,7 @@ Unix:
 git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 ```
 
-2. Run the lua script for requiring all the packages. This should be in `./lua/some1and2/packer.lua`. 
+2. Run the lua script for requiring all the packages. This should be in `./lua/some1and2/packer.lua`.
     - Run `:so` in this file.
     - Run `:PackerSync` to actually install all the packages.
     - Run `:q` and go outside (or restart vim and see if things work).
