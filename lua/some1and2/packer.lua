@@ -8,7 +8,11 @@ return require("packer").startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
-    use "jose-elias-alvarez/null-ls.nvim"
+    -- Archived and doesn't work with new NVIM
+    -- use "jose-elias-alvarez/null-ls.nvim"
+    -- null-ls alternative
+    use "nvimtools/none-ls.nvim"
+
     use "MunifTanjim/eslint.nvim"
 
     -- Styles

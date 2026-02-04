@@ -3,9 +3,10 @@ vim.lsp.set_log_level("debug")
 local lsp = require("lsp-zero").preset({})
 
 local eslint = require("eslint")
-local null_ls = require("null-ls")
 
-null_ls.setup()
+-- local null_ls = require("null-ls")
+-- null_ls.setup()
+
 eslint.setup({
     bin = "eslint",
     code_actions = {
