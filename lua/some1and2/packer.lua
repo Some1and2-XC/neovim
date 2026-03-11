@@ -15,6 +15,9 @@ return require("packer").startup(function(use)
     use { "edkolev/promptline.vim" }
     use { "ryanoasis/vim-devicons" }
 
+    -- Animated Cursor
+    -- use "sphamba/smear-cursor.nvim" -- cool plugin but ruins performance.
+
     -- Color Scheme
     use {"rebelot/kanagawa.nvim", commit = "1749cea"} -- Sets the colorscheme
 
