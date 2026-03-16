@@ -1,6 +1,11 @@
 -- Goes to projects directory
 -- vim.keymap.set("n", "<leader>projects", ":Ex /media/some1and2/T7<CR>")
 
+-- Clears text, used for broken plugins putting non-characters and leaving them.
+vim.keymap.set('n', '<leader>rc', function()
+    vim.api.nvim_buf_clear_namespace(0, -1, 0, -1)
+end, { desc = 'Clear virtual text' })
+
 -- Enters visual block with :Vb
 vim.cmd("command! Vb normal! <C-v>")
 

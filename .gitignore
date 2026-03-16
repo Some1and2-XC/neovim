@@ -2,3 +2,4 @@ plugin/
 undodir
 !after/plugin/
 packer_compiled.lua
+spell/
