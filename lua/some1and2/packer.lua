@@ -44,7 +44,8 @@ return require("packer").startup(function(use)
             -- LSP Support
             {'williamboman/mason.nvim'},           -- Optional
             {'williamboman/mason-lspconfig.nvim'}, -- Optional
-            -- {'imrcjkb/rustaceanvim'}, -- rust
+            -- use { "saghen/blink.cmp", branch = "v1", }
+
         }
     }
 
